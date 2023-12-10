@@ -430,12 +430,15 @@
             padding: 14px;
 
         }
-        #bbb11{
+
+        #bbb11 {
             display: none;
         }
-        #bbb22{
+
+        #bbb22 {
             display: none;
         }
+
         .favo {
             height: 200px;
             width: 100%;
@@ -448,7 +451,8 @@
             border-radius: 20px;
             text-align: center;
         }
-        #favo{
+
+        #favo {
             display: none;
         }
     </style>
@@ -515,19 +519,19 @@
                     </div>
 
                 </a>
-                
-            <div class="favo" id="favo">لا توجد مانجا</div>
+
+                <div class="favo" id="favo">لا توجد مانجا</div>
             </div>
 
         </div>
     </div>
 
     <script>
-        var mune1 = document.getElementById("mune1")
+        var mune1 = document.getElementById("mune1");
         let mune2 = document.getElementById("mune2");
         let menu3 = document.getElementById("menu3");
         let menu33 = document.getElementById("menu33");
-
+    
         mune1.onclick = function () {
             menu3.style.display = "block";
             menu33.style.display = "block";
@@ -546,36 +550,39 @@
             mune1.style.display = "block";
             mune2.style.display = "none";
         }
-
-
-
-
+    
         let booo1 = document.getElementById("bigaba");
         let gigi = document.getElementById("gigi");
-
+        let booo3 = document.getElementById("booo3");
+    
+        // أضف مستمع حدث لرصد التغييرات في حقل النص
+        booo3.addEventListener("input", function () {
+            handleSearch();
+        });
+    
         gigi.onclick = function () {
-
-            let booo3 = document.getElementById("booo3").value;
-            switch (booo3) {
-                case ("Power Eno"):
+            handleSearch();
+        };
+    
+        function handleSearch() {
+            let inputValue = booo3.value.toLowerCase();
+            // يمكنك استخدام startsWith للتحقق من بداية النص بكلمة المفتاح المطلوبة
+            if (inputValue.startsWith("power")) {
                 bbb11.style.display = "block";
                 favo.style.display = "none";
                 bbb22.style.display = "none";
-                    break
-                case ("Solo Leveling"):
+            } else if (inputValue.startsWith("solo")) {
                 bbb22.style.display = "block";
                 favo.style.display = "none";
                 bbb11.style.display = "none";
-                    break
-                default:
+            } else {
                 favo.style.display = "block";
                 bbb11.style.display = "none";
                 bbb22.style.display = "none";
-
             }
         }
-
     </script>
+    
 </body>
 
 </html>

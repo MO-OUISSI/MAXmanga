@@ -179,8 +179,8 @@
         }
 
         .hhh {
-            background-color: rgba(24, 22, 22, 0.781);
-            color: white;
+            background-color: #0f1011;
+            color: #7f8a96;
             font-size: 20px;
             width: 70%;
             height: 100vh;
@@ -189,28 +189,33 @@
             align-items: center;
             flex-direction: column;
             position: absolute;
+            padding-top: 40px;
             left: 0;
             top: 0;
             position: fixed;
+            z-index: 3;
         }
 
         .fff {
-            border: 3px solid white;
-            width: 70%;
+            background-color: #17181a;
+            width: 94%;
             height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            margin-left: 15%;
+            border-radius: 5px;
+            color: #7f8a96;
+            margin-left: 3%;
             cursor: pointer;
             user-select: none;
             margin-top: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: start;
         }
 
         .fff:hover {
-            border: 3px solid rgb(27, 151, 145);
-            color: rgb(27, 151, 145);
+            background-color: #082142;
+
         }
 
         #menu3 {
@@ -283,12 +288,19 @@
         #menu33 {
             display: none;
         }
-        .lkk{
+        .lkk {
+            text-decoration: none;
             height: 100%;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            color: #7f8a96;
+        }
+        .biuy{
+            width: 25px;
+            margin-right: 8px;
+            margin-left: 4px;
         }
         .starsave{
             width: 100%;
@@ -327,12 +339,14 @@
             <div class="btn111"><img class="title4" src="images/dra.jpg" alt=""></div>
         </div>
         <div class="hhh" id="menu3">
-            <div class="mune" id="mune2"><img src="./images/img.icons8.png" alt=""></div>
             <div class="title2"><img class="title2" src="images/b02d7237-1803-45d3-978e-4835a59863ee.jpg" alt=""></div>
             <h4>POWER MANGA</h4>
-            <div class="fff" id="ggh"><a href="./Login.html" class="lkk">Login</a></div>
-            <div class="fff"><a href="./myManga.html" class="lkk">My Manga</a></div>
-            <div class="fff"><a href="./topManga.html" class="lkk">Top Manga</a></div>
+            <div class="fff" id="ggh"><a href="./index.html" class="lkk"><img src="./images/home.png" alt="" class="biuy">Home</a></div>
+            <div class="fff"><a href="./recherche.html" class="lkk"><img src="./images/search.png" alt="" class="biuy">Search</a></div>
+            <div class="fff" id="ggh"><a href="./Login.html" class="lkk"><img src="./images/user.png" alt="" class="biuy">Login</a></div>
+            <div class="fff"><a href="./myManga.html" class="lkk"><img src="./images/bookmark.png" alt="" class="biuy">My Manga</a></div>
+            <div class="fff"><a href="./topManga.html" class="lkk"><img src="./images/ranking.png" alt="" class="biuy">Top Manga</a></div>
+            <div class="fff"><a href="#" class="lkk"><img src="./images/param.png" alt="" class="biuy">Settings</a></div>
         </div>
         <div class="hhh2" id="menu33"></div>
         <div class="box">
@@ -377,22 +391,15 @@
     </div>
 
     <script>
-        var mune1 = document.getElementById("mune1")
-        let mune2 = document.getElementById("mune2");
+        var mune1 = document.getElementById("mune1");
         let menu3 = document.getElementById("menu3");
         let menu33 = document.getElementById("menu33");
-
+    
         mune1.onclick = function () {
             menu3.style.display = "block";
             menu33.style.display = "block";
             mune1.style.display = "none";
             mune2.style.display = "block";
-        }
-        mune2.onclick = function () {
-            menu3.style.display = "none";
-            menu33.style.display = "none";
-            mune1.style.display = "block";
-            mune2.style.display = "none";
         }
         menu33.onclick = function () {
             menu3.style.display = "none";

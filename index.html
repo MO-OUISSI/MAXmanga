@@ -133,6 +133,31 @@
 
         #menu3 {
             display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            animation: slideIn 0.4s ease-in-out forwards;
+            /* Animation for sliding in */
+        }
+
+        @keyframes slideIn {
+            from {
+                left: -100%;
+            }
+
+            to {
+                left: 0;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: -100%;
+            }
         }
 
         #mune2 {
@@ -205,8 +230,9 @@
 
         .manj {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             width: 100%;
             padding-top: 25px;
             padding-bottom: 15px;
@@ -214,9 +240,8 @@
         }
 
         .mgw {
-            width: 150px;
-            height: 260px;
-            margin: 10px;
+            width: 142px;
+            margin: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -366,6 +391,26 @@
             margin-right: 8px;
             margin-left: 4px;
         }
+        .news{
+            background-color: rgb(255, 32, 32);
+            margin: 5px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 50px;
+            height: 20px;
+            border-radius: 3px;
+            transition: background-color 0.5s ease;
+            
+        }
+        .topn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
         
     </style>
 </head>
@@ -396,6 +441,7 @@
                     alt="Image 1" class="moving-image active">
                 <img src="./images/b02d7237-1803-45d3-978e-4835a59863ee.jpg" alt="Image 2" class="moving-image hidden">
                 <img src="./images/MgPower.jpg" alt="Image 3" class="moving-image hidden">
+                <img src="./images/attta.jpg" alt="Image 4" class="moving-image hidden">
             </div>
             <div class="bav">قائمة المانجا</div>
 
@@ -405,11 +451,8 @@
                         <img src="./images/MgPower.jpg" alt="" class="cnc">
                         <div class="tit">Power Eno</div>
                         <div class="star">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
+                            <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
+                            <div class="news">new</div>
                         </div>
                     </a>
                 </div>
@@ -420,11 +463,28 @@
                             alt="">
                         <div class="tit">Solo Leveling</div>
                         <div class="star">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
+                            <div class="topn">9.8<img src="./images/star.png" alt="" class="stta"></div>
+                            <div class="news">new</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="mgw">
+                    <a href="./oneP.html">
+                        <img src="./images/one.jpg" alt="" class="cnc">
+                        <div class="tit">One piece</div>
+                        <div class="star">
+                            <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
+                            <div class="news">new</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="mgw">
+                    <a href="./attack.html">
+                        <img src="./images/attta.jpg" alt="" class="cnc">
+                        <div class="tit">Attack on titan</div>
+                        <div class="star">
+                            <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
+                            <div class="news">new</div>
                         </div>
                     </a>
                 </div>
@@ -438,11 +498,8 @@
                         <img src="./images/MgPower.jpg" alt="" class="cnc">
                         <div class="tit">Power Eno</div>
                         <div class="star">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
+                            <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
+                            <div class="news">new</div>
                         </div>
                     </a>
                 </div>
@@ -453,11 +510,28 @@
                             alt="">
                         <div class="tit">Solo Leveling</div>
                         <div class="star">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
-                            <img src="./images/star.png" alt="" class="stta">
+                            <div class="topn">9.8<img src="./images/star.png" alt="" class="stta"></div>
+                            <div class="news">new</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="mgw">
+                    <a href="./oneP.html">
+                        <img src="./images/one.jpg" alt="" class="cnc">
+                        <div class="tit">One piece</div>
+                        <div class="star">
+                            <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
+                            <div class="news">new</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="mgw">
+                    <a href="./attack.html">
+                        <img src="./images/attta.jpg" alt="" class="cnc">
+                        <div class="tit">Attack on titan</div>
+                        <div class="star">
+                            <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
+                            <div class="news">new</div>
                         </div>
                     </a>
                 </div>
@@ -469,18 +543,30 @@
         var mune1 = document.getElementById("mune1");
         let menu3 = document.getElementById("menu3");
         let menu33 = document.getElementById("menu33");
-    
+
         mune1.onclick = function () {
             menu3.style.display = "block";
             menu33.style.display = "block";
             mune1.style.display = "none";
             mune2.style.display = "block";
+
+            // Add the class for sliding in
+            menu3.classList.add("slideIn");
         }
         menu33.onclick = function () {
             menu3.style.display = "none";
             menu33.style.display = "none";
             mune1.style.display = "block";
             mune2.style.display = "none";
+
+            // Add the class for sliding out
+            menu3.classList.remove("slideIn");
+            menu3.classList.add("slideOut");
+
+            // Reset the animation after it completes
+            setTimeout(function () {
+                menu3.classList.remove("slideOut");
+            }, 500);
         }
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -504,6 +590,29 @@
         let booo1 = document.getElementById("booo1");
         let booo2 = document.getElementById("booo2");
         let booo3 = document.getElementById("booo3");
+
+        
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            // اختيار جميع العناصر ذات الفئة "news"
+            let newsElements = document.querySelectorAll('.news');
+
+            // قائمة بالألوان التي تريد استخدامها (أحمر وأبيض)
+            let colors = ['red', 'rgb(253, 58, 58)'];
+
+            // دورة عبر جميع العناصر وتغيير لونها بشكل دوري
+            newsElements.forEach(function (newsElement) {
+                let currentColorIndex = 0;
+
+                setInterval(function () {
+                    let newColor = colors[currentColorIndex];
+                    newsElement.style.backgroundColor = newColor;
+                    currentColorIndex = (currentColorIndex + 1) % colors.length;
+                }, 500);
+            });
+        });
+
+        
         
     </script>
 </body>

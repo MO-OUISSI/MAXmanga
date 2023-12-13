@@ -131,6 +131,31 @@
 
         #menu3 {
             display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            animation: slideIn 0.4s ease-in-out forwards;
+            /* Animation for sliding in */
+        }
+
+        @keyframes slideIn {
+            from {
+                left: -100%;
+            }
+
+            to {
+                left: 0;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: -100%;
+            }
         }
 
         #mune2 {
@@ -184,8 +209,8 @@
         }
 
         .favo {
-            height: 470px;
             width: 100%;
+            padding: 6px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -283,6 +308,12 @@
             margin-right: 8px;
             margin-left: 4px;
         }
+        .topn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
     </style>
 </head>
 
@@ -319,11 +350,7 @@
                         <div class="jjjfg">
                             <div class="tita">Solo Leveling</div>
                             <div class="star">
-                                <img src="./images/star.png" alt="" class="stta">
-                                <img src="./images/star.png" alt="" class="stta">
-                                <img src="./images/star.png" alt="" class="stta">
-                                <img src="./images/star.png" alt="" class="stta">
-                                <img src="./images/star.png" alt="" class="stta">
+                                <div class="topn">9.8<img src="./images/star.png" alt="" class="stta"></div>
                             </div>
                         </div>
                     </div>
@@ -337,11 +364,38 @@
                             <div class="jjjfg">
                                 <div class="tita">Power Eno</div>
                                 <div class="star">
-                                    <img src="./images/star.png" alt="" class="stta">
-                                    <img src="./images/star.png" alt="" class="stta">
-                                    <img src="./images/star.png" alt="" class="stta">
-                                    <img src="./images/star.png" alt="" class="stta">
-                                    <img src="./images/star.png" alt="" class="stta">
+                                    <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./oneP.html" id="bbb33">
+                    <div class="boxtop">
+                        <div class="numf">3</div>
+                        <div class="bok">
+                            <img src="./images/one.jpg" alt="" class="bmml">
+                            <div class="jjjfg">
+                                <div class="tita">One piece</div>
+                                <div class="star">
+                                    <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+
+                <a href="./attack.html" id="bbb44">
+                    <div class="boxtop">
+                        <div class="numf">4</div>
+                        <div class="bok">
+                            <img src="./images/attta.jpg" alt="" class="bmml">
+                            <div class="jjjfg">
+                                <div class="tita">Attack on titan</div>
+                                <div class="star">
+                                    <div class="topn">9.5<img src="./images/star.png" alt="" class="stta"></div>
                                 </div>
                             </div>
                         </div>
@@ -353,22 +407,33 @@
         </div>
     </div>
 
-    <script>
-        var mune1 = document.getElementById("mune1");
+    <script>var mune1 = document.getElementById("mune1");
         let menu3 = document.getElementById("menu3");
         let menu33 = document.getElementById("menu33");
-    
+
         mune1.onclick = function () {
             menu3.style.display = "block";
             menu33.style.display = "block";
             mune1.style.display = "none";
             mune2.style.display = "block";
+
+            // Add the class for sliding in
+            menu3.classList.add("slideIn");
         }
         menu33.onclick = function () {
             menu3.style.display = "none";
             menu33.style.display = "none";
             mune1.style.display = "block";
             mune2.style.display = "none";
+
+            // Add the class for sliding out
+            menu3.classList.remove("slideIn");
+            menu3.classList.add("slideOut");
+
+            // Reset the animation after it completes
+            setTimeout(function () {
+                menu3.classList.remove("slideOut");
+            }, 500);
         }
 
 

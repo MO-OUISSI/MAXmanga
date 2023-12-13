@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .total {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(0, 0, 0);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(./images/attta.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        html,
+        .total {
+            height: 100%;
+            margin: 0;
+        }
+
+        .total::before {
+            content: "";
+            display: block;
+            height: 100%;
+        }
+
+        .box {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .title {
+            background-color: rgba(0, 0, 0, 0);
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            padding: 10px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        .btn1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 30px;
+            border: none;
+            border-radius: 18px;
+            font-size: 17px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .title2 {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        .title4 {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            padding: 4px;
+            margin: auto;
+        }
+
+        .title4:hover {
+            background-color: rgba(255, 255, 255, 0.171);
+        }
+
+        .cc {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .cavr {
+            border-radius: 20px;
+            width: 86%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: rgb(255, 255, 255);
+        }
+
+        .doc {
+            border: 2px solid rgb(255, 255, 255);
+            color: white;
+            text-align: end;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .chap {
+            border: 2px solid rgb(255, 255, 255);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .bov {
+            background-image: linear-gradient(90deg, rgb(4, 0, 255), rgb(27, 151, 145));
+            color: white;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin: 4px;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 700;
+        }
+
+        .bov:hover {
+            background-image: linear-gradient(90deg, rgb(13, 9, 235), rgb(34, 197, 189));
+            color: rgb(255, 255, 255);
+            transform: scale(0.95);
+            all: 1s;
+        }
+
+        .mune {
+            height: 33px;
+            width: 33px;
+        }
+
+        #mune2 {
+            height: 48px;
+            width: 48px;
+            margin: 3px;
+        }
+
+        .hhh {
+            background-color: #0f1011;
+            color: #7f8a96;
+            font-size: 20px;
+            width: 70%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            padding-top: 40px;
+            left: 0;
+            top: 0;
+            position: fixed;
+            z-index: 3;
+        }
+
+        .fff {
+            background-color: #17181a;
+            width: 94%;
+            height: 40px;
+            border-radius: 5px;
+            color: #7f8a96;
+            margin-left: 3%;
+            cursor: pointer;
+            user-select: none;
+            margin-top: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: start;
+        }
+
+        .fff:hover {
+            background-color: #082142;
+
+        }
+
+        #menu3 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            animation: slideIn 0.4s ease-in-out forwards;
+            /* Animation for sliding in */
+        }
+
+        @keyframes slideIn {
+            from {
+                left: -100%;
+            }
+
+            to {
+                left: 0;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: -100%;
+            }
+        }
+
+
+        #mune2 {
+            display: none;
+        }
+
+        h4 {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .dff {
+            text-decoration: none;
+            color: white;
+            height: 100%;
+            width: 100%;
+        }
+
+        .ret {
+            background-image: linear-gradient(90deg, rgb(13, 9, 235), rgb(34, 197, 189));
+            width: 100%;
+            height: 34px;
+            border-radius: 20px;
+            font-size: 20px;
+            color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .kal {
+            width: 30px;
+        }
+
+        a {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 70%;
+            height: 34px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .hhh2 {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            font-size: 20px;
+            width: 30%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            top: 0;
+            position: fixed;
+            z-index: 3;
+        }
+
+        #menu33 {
+            display: none;
+        }
+
+        .lkk {
+            text-decoration: none;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #7f8a96;
+        }
+
+        .biuy {
+            width: 25px;
+            margin-right: 8px;
+            margin-left: 4px;
+        }
+
+
+        .starsave {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.295);
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .star {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            height: 35px;
+        }
+
+        .stta {
+            width: 27px;
+        }
+
+        .cao {
+            width: 27px;
+
+        }
+
+        #cao2 {
+            display: none;
+        }
+
+        
+
+        .bbbb {
+            background-color: rgb(236, 236, 236);
+            width: 140px;
+            height: 35px;
+            border-radius: 4px;
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 17px;
+        }
+
+        .bbbb:hover {
+            background-color: rgb(139, 139, 139);
+        }
+
+        #kaji {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="total" id="total">
+        <div class="title">
+            <div class="mune" id="mune1"><img src="./images/56763.png" alt=""></div>
+            <div class="fd"></div>
+            <div class="btn111" id="title4"><img class="title4" src="images/troof.png" alt=""></div>
+            <div class="kaji" id="kaji">
+                <div class="bbbb">Save</div>
+            </div>
+        </div>
+        <div class="hhh" id="menu3">
+            <div class="title2"><img class="title2" src="images/b02d7237-1803-45d3-978e-4835a59863ee.jpg" alt=""></div>
+            <h4>POWER MANGA</h4>
+            <div class="fff" id="ggh"><a href="./index.html" class="lkk"><img src="./images/home.png" alt=""
+                        class="biuy">Home</a></div>
+            <div class="fff"><a href="./recherche.html" class="lkk"><img src="./images/search.png" alt=""
+                        class="biuy">Search</a></div>
+            <div class="fff" id="ggh"><a href="./Login.html" class="lkk"><img src="./images/user.png" alt=""
+                        class="biuy">Login</a></div>
+            <div class="fff"><a href="./myManga.html" class="lkk"><img src="./images/bookmark.png" alt=""
+                        class="biuy">My Manga</a></div>
+            <div class="fff"><a href="./topManga.html" class="lkk"><img src="./images/ranking.png" alt=""
+                        class="biuy">Top Manga</a></div>
+            <div class="fff"><a href="#" class="lkk"><img src="./images/param.png" alt="" class="biuy">Settings</a>
+            </div>
+        </div>
+        <div class="hhh2" id="menu33"></div>
+        <div class="box">
+            <div class="cc">
+                <a href="./index.html">
+                    <div class="ret">
+                        <img src="./images/img.icons8.png" alt="" class="kal">
+                        <p class="pp">الرجوع الى القائمة</p>
+                    </div>
+                </a>
+                <div class="cavr">
+                    <h1 id="h1">Attack on titan</h1>
+                    <img class="cavr" src="./images/attta.jpg" alt="">
+                </div>
+                <div class="starsave">
+                    <div class="star">
+                        <img src="./images/star.png" alt="" class="stta">
+                        <img src="./images/star.png" alt="" class="stta">
+                        <img src="./images/star.png" alt="" class="stta">
+                        <img src="./images/star.png" alt="" class="stta">
+                        <img src="./images/star.png" alt="" class="stta">
+                    </div>
+                    <div class="save">
+                        <img src="./images/save-instagram.png" alt="" class="cao" id="cao1">
+                        <img src="./images/savePer.png" alt="" class="cao" id="cao2">
+                    </div>
+                </div>
+                <div class="doc">
+                    <h3>:القصة</h3>
+                    <p>تدور أحداث المانجا في عالم تُجبر فيه البشرية على العيش في مدن محاطة بثلاثة جدران ضخمة تحميهم من أشباه البشر العملاقة التي تأكل الإنسان والتي يشار إليها باسم العمالقة</p>
+                </div>
+                <div class="chap">
+                    <h2>الفصول</h2>
+                    <div class="bov"><a href="" class="dff">الفصل 1</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var mune1 = document.getElementById("mune1");
+        let menu3 = document.getElementById("menu3");
+        let menu33 = document.getElementById("menu33");
+
+        mune1.onclick = function () {
+            menu3.style.display = "block";
+            menu33.style.display = "block";
+            mune1.style.display = "none";
+            mune2.style.display = "block";
+
+            // Add the class for sliding in
+            menu3.classList.add("slideIn");
+        }
+        menu33.onclick = function () {
+            menu3.style.display = "none";
+            menu33.style.display = "none";
+            mune1.style.display = "block";
+            mune2.style.display = "none";
+
+            // Add the class for sliding out
+            menu3.classList.remove("slideIn");
+            menu3.classList.add("slideOut");
+
+            // Reset the animation after it completes
+            setTimeout(function () {
+                menu3.classList.remove("slideOut");
+            }, 500);
+        }
+
+
+        let cao1 = document.getElementById("cao1");
+        let cao2 = document.getElementById("cao2");
+        cao1.onclick = function () {
+            cao1.style.display = "none";
+            cao2.style.display = "block";
+        }
+        cao2.onclick = function () {
+            cao1.style.display = "block";
+            cao2.style.display = "none";
+        }
+
+
+        let title4 = document.getElementById("title4");
+        let kaji = document.getElementById("kaji");
+        title4.onclick = function () {
+            title4.style.display = "none";
+            kaji.style.display = "block";
+        }
+        kaji.onclick = function () {
+            title4.style.display = "block";
+            kaji.style.display = "none";
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

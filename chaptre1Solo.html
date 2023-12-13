@@ -204,12 +204,35 @@
 
         }
 
+        
+
         #menu3 {
             display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            animation: slideIn 0.4s ease-in-out forwards;
+            /* Animation for sliding in */
         }
 
-        #mune2 {
-            display: none;
+        @keyframes slideIn {
+            from {
+                left: -100%;
+            }
+
+            to {
+                left: 0;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: -100%;
+            }
         }
 
         h4 {
@@ -413,18 +436,30 @@
         var mune1 = document.getElementById("mune1");
         let menu3 = document.getElementById("menu3");
         let menu33 = document.getElementById("menu33");
-    
+
         mune1.onclick = function () {
             menu3.style.display = "block";
             menu33.style.display = "block";
             mune1.style.display = "none";
             mune2.style.display = "block";
+
+            // Add the class for sliding in
+            menu3.classList.add("slideIn");
         }
         menu33.onclick = function () {
             menu3.style.display = "none";
             menu33.style.display = "none";
             mune1.style.display = "block";
             mune2.style.display = "none";
+
+            // Add the class for sliding out
+            menu3.classList.remove("slideIn");
+            menu3.classList.add("slideOut");
+
+            // Reset the animation after it completes
+            setTimeout(function () {
+                menu3.classList.remove("slideOut");
+            }, 500);
         }
 
 
